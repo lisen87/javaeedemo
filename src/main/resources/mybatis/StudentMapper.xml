@@ -7,6 +7,9 @@
     <insert id="addStudent" >
         insert into student(name, age, sex, birthday) VALUES (#{name},#{age},#{sex},#{birthday})
     </insert>
+    <delete id="delNull">
+        delete from student where user_id is null or user_name is null
+    </delete>
 
     <select id="findAll" resultType="com.example.demo.bean.Student">
         select id, name, age, sex, birthday, user_name userName from student
@@ -14,4 +17,12 @@
     <resultMap id="findAllMap" type="com.example.demo.bean.Student">
         <id property="userName" column="user_name"/>
     </resultMap>
+    <select id="leftJoin" resultType="com.example.demo.bean.Student">
+    </select>
+    <select id="getList" resultType="com.example.demo.bean.Student">
+        select id, name, age
+        from student
+        where name like concat(concat('%', #{likeName}), '%')
+        limit #{page} , #{limit}
+    </select>
 </mapper>

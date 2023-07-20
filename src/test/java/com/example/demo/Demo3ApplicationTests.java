@@ -30,10 +30,11 @@ class Demo3ApplicationTests {
         Calendar instance = Calendar.getInstance();
         instance.set(1988,Calendar.NOVEMBER,14);
 //        studentMapper.addStudent("lisen",33,1,new Date(instance.getTimeInMillis()));
-        List<Student> all = studentMapper.findAll();
-        for (Student student : all) {
-            System.out.println(student.toString());
-        }
+//        List<Student> all = studentMapper.leftJoin();
+//        for (Student student : all) {
+//            System.out.println(student.toString());
+//        }
+//        studentMapper.delNull();
     }
 
 }

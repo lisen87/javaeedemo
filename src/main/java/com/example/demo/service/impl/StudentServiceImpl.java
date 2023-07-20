@@ -25,4 +25,9 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> findAll() {
         return studentMapper.findAll();
     }
+
+    @Override
+    public List<Student> getList(int page, int limit,String likeName) {
+        return studentMapper.getList((page-1)* limit, limit,likeName);
+    }
 }

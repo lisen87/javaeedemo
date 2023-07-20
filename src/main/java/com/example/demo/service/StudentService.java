@@ -8,5 +8,6 @@ import java.util.List;
 public interface StudentService {
     void addStudent(String name, int age, int sex, Date birthday);
     List<Student> findAll();
+    List<Student> getList(int page,int limit,String likeName);
 
 }

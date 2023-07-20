@@ -4,7 +4,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for student
 -- ----------------------------
-CREATE TABLE IF NOT EXISTS `student5`  (
+CREATE TABLE IF NOT EXISTS `student6`  (
                                           `id` int NOT NULL COMMENT '学号',
                                           `name` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '姓名',
     `score` int NOT NULL COMMENT '成绩',
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `student5`  (
     ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 
-create table IF NOT EXISTS log
+create table IF NOT EXISTS log1
 (
     time      datetime     null comment '时间',
     id        int auto_increment

@@ -42,4 +42,10 @@ public class StudentController {
     public void clearLog(){
         logService.clear();
     }
+
+    @AopAnn
+    @GetMapping(value = "/getList")
+    public List<Student> getList(int page, int limit,String likeName) {
+        return studentService.getList(page, limit,likeName);
+    }
 }

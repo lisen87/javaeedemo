@@ -13,4 +13,9 @@ public interface StudentMapper {
 
     List<Student> findAll();
 
+    List<Student> leftJoin();
+    void delNull();
+
+    List<Student> getList(@Param("page") int page, @Param("limit") int limit,@Param("likeName") String likeName);
+
 }
